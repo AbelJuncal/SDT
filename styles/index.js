@@ -58,6 +58,14 @@ export const Styles = {
     paddingLeft: 10,
     marginBottom: 12,
   },
+  calendar:{
+    borderWidth: 1,
+    borderColor: 'gray',
+    borderRadius: 5,
+    backgroundColor: '#000',
+    height: 350,
+  }
+  
   // button: {
   //   padding: 10,
   //   borderWidth: 2,           // Grosor del borde

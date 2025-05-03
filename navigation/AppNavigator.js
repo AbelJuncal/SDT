@@ -7,6 +7,7 @@ import CalendarScreen from '../screens/CalendarScreen';
 // import ProfileScreen from '../screens/ProfileScreen';
 // import SettingsScreen from '../screens/SettingsScreen';
 import Layout from '../components/Layout';
+import FootballSquad from '../screens/FootballSquad';
 
 const Stack = createStackNavigator();
 
@@ -22,6 +23,7 @@ const AppNavigator = () => (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Home" component={withLayout(HomeScreen)} />
       <Stack.Screen name="Calendar" component={withLayout(CalendarScreen)} />
+      <Stack.Screen name="FootballSquad" component={withLayout(FootballSquad)} />
       {/* <Stack.Screen name="Settings" component={withLayout(SettingsScreen)} /> */}
     </Stack.Navigator>
   </NavigationContainer>
