@@ -3,14 +3,14 @@ import { View, Text, StyleSheet } from 'react-native';
 
 const Footer = () => (
   <View style={styles.footer}>
-    <Text style={styles.text}>© 2025 Mi App</Text>
+    <Text style={styles.text}>© 2025 S3lino</Text>
   </View>
 );
 
 const styles = StyleSheet.create({
   footer: {
-    backgroundColor: '#333',
-    padding: 10,
+    backgroundColor: '#000',
+    padding: 5,
     alignItems: 'center',
     position: 'absolute',
     bottom: 0,

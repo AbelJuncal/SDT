@@ -1,17 +1,27 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet } from 'react-native';
+
+import logo from '../assets/images/escudo.webp'; 
 
 const Header = () => (
   <View style={styles.header}>
-    <Text style={styles.text}>Mi App</Text>
+    <Image source={logo} style={styles.logo} />
+    <Text style={styles.text}>Virtual Trainer</Text>
   </View>
 );
 
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: '#000',
     padding: 10,
     alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  logo: {
+    width: 40,
+    height: 40,
+    resizeMode: 'contain',
   },
   text: {
     color: 'white',
