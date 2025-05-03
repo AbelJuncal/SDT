@@ -45,33 +45,6 @@ LocaleConfig.locales['gl'] = {
 //     });
 //   };
 
-const sendTelegramMessage = async (date, time) => {
-    const TOKEN = '7759168539:AAHKy4JK6BysQC3BEaXfjNLWGYCo-3ChWOU';
-    const CHAT_ID = '1161434961';
-    const url = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
-
-    const formattedDate = date || 'Sin fecha';
-    const formattedTime = time ? `${time.getHours()}:${time.getMinutes().toString().padStart(2, '0')}` : 'Sin hora';
-
-    const text = `📅 *Entrenamiento confirmado*\n\n🗓 Fecha: ${formattedDate}\n⏰ Hora: ${formattedTime}\n💪 Nos vemos en el campo!`;
-
-    const replyMarkup = {
-        inline_keyboard: [
-        [{ text: 'Sí', callback_data: 'yes' }, { text: 'No', callback_data: 'no' }],
-        ],
-    };
-
-    await fetch(url, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-        chat_id: CHAT_ID,
-        text,
-        reply_markup: replyMarkup,
-        parse_mode: 'Markdown',
-        }),
-    });
-    };
 
 const selectFile = async () => {
     try {
@@ -161,14 +134,14 @@ const CalendarScreen = ({navigation}) => {
           <Button
             title="Convocatoria seguinte entrenamento"
             color={Colors.primary}
-            onPress={() => navigation.navigate('FootballSquad')}
+            onPress={() => navigation.navigate('FootballSquad',{ tipoConvocatoria: 'entrenamiento' , time})}
           />
         </View>
         <View style={Styles.buttonWrapper}>
           <Button
             title="Convocatoria seguinte partido"
             color={Colors.primary}
-            onPress={() => navigation.navigate('FootballSquad')}
+            onPress={() => navigation.navigate('FootballSquad',{ tipoConvocatoria: 'partido' , time})}
           />
         </View>
       </View>
