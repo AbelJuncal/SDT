@@ -1,0 +1,26 @@
+Nombre,Apellidos,Edad,Posición,Partidos_Jugados,Minutos,Goles,Tarjetas_Amarillas,Tarjetas_Rojas,Lesionado
+Sergio,Castro Jiménez,24,Centrocampista,35,2120,23,5,0,False
+Carlos,Molina Núñez,26,Defensa,26,2803,27,1,2,False
+Fernando,Ruiz Núñez,21,Centrocampista,17,100,29,9,2,True
+Hugo,Ramírez Delgado,29,Defensa,15,2623,16,0,0,True
+Manuel,Navarro Morales,25,Portero,22,2631,22,8,2,False
+Andrés,Ramírez Vargas,30,Centrocampista,10,2716,29,8,0,True
+Eduardo,López Gómez,27,Centrocampista,11,1233,10,5,2,True
+Andrés,Vargas Delgado,34,Centrocampista,1,1949,22,8,1,True
+Adrián,Rodríguez Delgado,35,Centrocampista,1,3215,4,4,0,True
+Adrián,Cruz Vargas,31,Centrocampista,28,2249,5,0,2,False
+Eduardo,Romero Cano,18,Defensa,0,1549,25,1,0,True
+David,López Morales,31,Delantero,32,3031,20,3,2,True
+Hugo,Rodríguez Reyes,28,Centrocampista,28,1802,22,3,3,True
+Manuel,Morales Jiménez,34,Defensa,10,1780,13,8,0,True
+Álvaro,Navarro Morales,22,Delantero,29,517,3,0,1,False
+Mario,Reyes López,34,Defensa,0,550,2,2,2,True
+Pedro,López Ramírez,23,Centrocampista,32,1958,27,0,1,True
+Raúl,López Gómez,35,Portero,33,714,21,2,2,False
+Mario,Ortega López,34,Defensa,27,3300,29,6,0,True
+Gonzalo,Morales Delgado,20,Portero,33,3304,14,7,0,True
+Mario,Delgado López,30,Delantero,30,75,29,10,2,False
+Gonzalo,Hernández Delgado,33,Portero,14,1218,30,10,3,True
+Rubén,Sánchez Torres,23,Portero,14,36,11,2,2,False
+Gonzalo,Ramírez Pérez,26,Portero,20,1762,14,0,2,True
+Hugo,López Vargas,20,Delantero,38,859,12,10,2,False

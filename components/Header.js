@@ -1,0 +1,34 @@
+import React from 'react';
+import { View, Text, Image, StyleSheet } from 'react-native';
+
+import logo from '../assets/images/escudo3.png'; 
+import logo2 from '../assets/images/Logo.png'; 
+
+const Header = () => (
+  <View style={styles.header}>
+    <Image source={logo} style={styles.logo} />
+    <Image source={logo2} style={styles.logo} />
+  </View>
+);
+
+const styles = StyleSheet.create({
+  header: {
+    backgroundColor: '#000',
+    padding: 10,
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  logo: {
+    width: 50,
+    height: 50,
+    resizeMode: 'contain',
+  },
+  text: {
+    fontWeight: 'bold',
+    color: 'white',
+    fontSize: 24,
+  },
+});
+
+export default Header;
