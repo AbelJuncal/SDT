@@ -1,4 +1,4 @@
-# SD Trainer
+# SDTrainer
 ### A first approach for a platform to help the coaches of all over the world.
 
 It all started in a bar having a few beers with my coach. He told me that small clubs were trying to find ways to include new technologies in their day to day life and we talked about doing something since I was a computer scientist. The topic was a bit lost but at HackUPC25 I had the opportunity to start working on this idea.
