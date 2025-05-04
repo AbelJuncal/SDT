@@ -129,15 +129,15 @@ const CalendarScreen = ({navigation}) => {
         />
         )}
   
-        <View style={Styles.rowButtons}>
-        <View style={Styles.buttonWrapper}>
+        <View>
+        <View style={Styles.button}>
           <Button
             title="Convocatoria seguinte entrenamento"
             color={Colors.primary}
             onPress={() => navigation.navigate('FootballSquad',{ tipoConvocatoria: 'entrenamiento' , time})}
           />
         </View>
-        <View style={Styles.buttonWrapper}>
+        <View style={Styles.button}>
           <Button
             title="Convocatoria seguinte partido"
             color={Colors.primary}
