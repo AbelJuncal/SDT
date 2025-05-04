@@ -51,7 +51,7 @@ const TeamList = () => {
           <Text style={styles.sectionTitle}>Entrenamientos</Text>
           {entrenamientos.map((player, index) => (
             <TouchableOpacity key={index} style={styles.item}>
-              <Text style={styles.text}>{player.duracion_minutos} - {player.asistentes}</Text>
+              <Text style={styles.text}>{player.duracion_minutos} minutos - {player.asistentes} participantes</Text>
               <Text style={styles.details}>{player.fecha}</Text>
             </TouchableOpacity>
           ))}

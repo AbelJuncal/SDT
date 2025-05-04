@@ -11,7 +11,6 @@ import TeamStats from '../screens/TeamStats';
 
 const Stack = createStackNavigator();
 
-// Esta función envuelve cualquier pantalla con el Layout
 const withLayout = (Component) => (props) => (
   <Layout>
     <Component {...props} />

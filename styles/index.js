@@ -65,17 +65,4 @@ export const Styles = {
     backgroundColor: '#000',
     height: 350,
   }
-  
-  // button: {
-  //   padding: 10,
-  //   borderWidth: 2,           // Grosor del borde
-  //   borderColor: 'white',     // Color del borde blanco
-  //   borderRadius: 5,          // Bordes redondeados (opcional)
-  //   backgroundColor: 'black', // Fondo negro, por ejemplo
-  //   alignItems: 'center',     // Centrar el texto horizontalmente
-  // },
-  // buttonText: {
-  //     color: 'white',
-  //     fontSize: 16,
-  // },
 };

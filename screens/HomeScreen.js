@@ -1,7 +1,5 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TextInput, TouchableOpacity} from 'react-native';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import { Styles, Colors } from '../styles'; // Importa los estilos y colores
 
 const HomeScreen = ({navigation}) => {

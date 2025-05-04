@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { View, Button, StyleSheet} from 'react-native';
 import {Calendar, LocaleConfig} from 'react-native-calendars';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import SegmentedControlTab from '@react-native-segmented-control/segmented-control';
 import { Styles, Colors } from '../styles';
 
 LocaleConfig.locales['gl'] = {
@@ -150,28 +149,3 @@ const CalendarScreen = ({navigation}) => {
 }
 
 export default CalendarScreen;
-
-// const Styles = StyleSheet.create({
-//     container: {
-//       flex: 1,
-//       padding: 10,
-//       justifyContent: 'flex-start',
-//       backgroundColor: '#fff',
-//     },
-//     calendar: {
-//       borderWidth: 1,
-//       borderColor: 'gray',
-//       borderRadius: 5,
-//       backgroundColor: '#ffffff',
-//       height: 350,
-//     },
-//     buttonContainer: {
-//       marginTop: 20,
-//       flexDirection: 'row',
-//       justifyContent: 'space-around',
-//     },
-//     button: {
-//       flex: 1,
-//       marginHorizontal: 10,
-//     },
-//   });

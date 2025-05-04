@@ -14,12 +14,7 @@ const Layout = ({ children }) => {
       <View style={styles.content}>
         {children}
       </View>
-
-        {/* Barra de símbolos justo encima del footer */}
         <View style={styles.iconBar}>
-        {/* <Image source={logo} style={styles.logo} />
-        <Image source={logo} style={styles.logo} />
-        <Image source={logo} style={styles.logo} /> */}
       </View>
 
       <Footer />
