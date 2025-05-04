@@ -1,22 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TouchableOpacity, ScrollView, StyleSheet, SafeAreaView, Dimensions } from 'react-native';
+import {Styles} from '../styles';
 
 const { height } = Dimensions.get('window');
-const API_URL = "https://21dc-147-83-201-130.ngrok-free.app";
+const API_URL = "https://d80b-147-83-201-130.ngrok-free.app";
 
 const PlayerList = () => {
   const [jugadores, setJugadores] = useState([]);
 
   useEffect(() => {
-    fetch(`${API_URL}/players`)
-      .then((res) => res.json())
-      .then((data) => {
+    const fetchPlayers = async () => {
+      try {
+        const response = await fetch(`${API_URL}/players`);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
         const players = data.rows.map((player) => ({
           ...player,
         }));
         setJugadores(players);
-      })
-      .catch((err) => console.error(err));
+      } catch (error) {
+        console.error("Error fetching players:", error);
+      }
+    };
+  
+    fetchPlayers();
   }, []);
 
   return (
@@ -25,18 +34,18 @@ const PlayerList = () => {
         {jugadores.map((player, index) => (
           <TouchableOpacity
             key={index}
-            style={styles.item}
+            style={Styles.button}
           >
-              <Text style={styles.text}>{player.Nombre}</Text>
-              <Text style={styles.text}>Apellidos: {player.Apellidos}</Text>
-              <Text style={styles.text}>Edad: {player.Edad}</Text>
-              <Text style={styles.text}>Posición: {player.Posición}</Text>
-              <Text style={styles.text}>Partidos Jugados: {player.Partidos_Jugados}</Text>
-              <Text style={styles.text}>Minutos: {player.Minutos}</Text>
-              <Text style={styles.text}>Goles: {player.Goles}</Text>
-              <Text style={styles.text}>Tarjetas Amarillas: {player.Tarjetas_Amarillas}</Text>
-              <Text style={styles.text}>Tarjetas Rojas: {player.Tarjetas_Rojas}</Text>
-              <Text style={styles.text}>Lesionado: {player.Lesionado ? 'Sí' : 'No'}</Text>
+              <Text style={Styles.buttonText}>{player.Nombre}</Text>
+              <Text style={Styles.buttonText}>Apellidos: {player.Apellidos}</Text>
+              <Text style={Styles.buttonText}>Edad: {player.Edad}</Text>
+              <Text style={Styles.buttonText}>Posición: {player.Posición}</Text>
+              <Text style={Styles.buttonText}>Partidos Jugados: {player.Partidos_Jugados}</Text>
+              <Text style={Styles.buttonText}>Minutos: {player.Minutos}</Text>
+              <Text style={Styles.buttonText}>Goles: {player.Goles}</Text>
+              <Text style={Styles.buttonText}>Tarjetas Amarillas: {player.Tarjetas_Amarillas}</Text>
+              <Text style={Styles.buttonText}>Tarjetas Rojas: {player.Tarjetas_Rojas}</Text>
+              <Text style={Styles.buttonText}>Lesionado: {player.Lesionado ? 'Sí' : 'No'}</Text>
           </TouchableOpacity>
         ))}
       </ScrollView>

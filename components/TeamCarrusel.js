@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, TouchableOpacity, ScrollView, StyleSheet, SafeAreaView, Dimensions } from 'react-native';
 
 const { height } = Dimensions.get('window');
-const API_URL = "https://21dc-147-83-201-130.ngrok-free.app";
+const API_URL = "https://d80b-147-83-201-130.ngrok-free.app";
 
 const TeamList = () => {
   const [jugadores, setJugadores] = useState([]);
@@ -21,6 +21,7 @@ const TeamList = () => {
 
     // Filtrar jugadores por tipo: 'partido' o 'entrenamiento'
     const partidos = jugadores.filter(player => player.tipo === 'partido');
+    const copa = jugadores.filter(player => player.tipo === 'copa');
     const entrenamientos = jugadores.filter(player => player.tipo === 'entrenamiento');
   
     return (
@@ -28,11 +29,21 @@ const TeamList = () => {
         <ScrollView contentContainerStyle={styles.scrollView}>
           
           {/* Sección de Partidos */}
-          <Text style={styles.sectionTitle}>Partidos</Text>
+          <Text style={styles.sectionTitle}>Partidos Liga</Text>
           {partidos.map((player, index) => (
             <TouchableOpacity key={index} style={styles.item}>
-              <Text style={styles.text}>{player.Nombre} - {player.tipo}</Text>
-              <Text style={styles.details}>{player.detalles}</Text>
+              <Text style={styles.text}>{player.resultado} vs {player.rival} </Text>
+              <Text style={styles.text}>{player.hora} - Xogadores participantes {player.asistentes}</Text>
+              <Text style={styles.details}>{player.fecha}</Text>
+            </TouchableOpacity>
+          ))}
+
+          <Text style={styles.sectionTitle}>Partidos Copa</Text>
+          {copa.map((player, index) => (
+            <TouchableOpacity key={index} style={styles.item}>
+              <Text style={styles.text}>{player.resultado} vs {player.rival} </Text>
+              <Text style={styles.text}>{player.hora} - Xogadores participantes {player.asistentes}</Text>
+              <Text style={styles.details}>{player.fecha}</Text>
             </TouchableOpacity>
           ))}
           
@@ -40,8 +51,8 @@ const TeamList = () => {
           <Text style={styles.sectionTitle}>Entrenamientos</Text>
           {entrenamientos.map((player, index) => (
             <TouchableOpacity key={index} style={styles.item}>
-              <Text style={styles.text}>{player.Nombre} - {player.tipo}</Text>
-              <Text style={styles.details}>{player.detalles}</Text>
+              <Text style={styles.text}>{player.duracion_minutos} - {player.asistentes}</Text>
+              <Text style={styles.details}>{player.fecha}</Text>
             </TouchableOpacity>
           ))}
   
@@ -53,7 +64,7 @@ const TeamList = () => {
   const styles = StyleSheet.create({
     container: {
       flexGrow: 1,
-      backgroundColor: '#f0f0f0',
+      backgroundColor: '#FFCE33',
     },
     scrollView: {
       paddingHorizontal: 16,
@@ -65,11 +76,11 @@ const TeamList = () => {
       borderRadius: 10,
       borderWidth: 1,
       borderColor: "#ccc",
-      backgroundColor: 'white',
+      backgroundColor: 'black',
     },
     text: {
       fontSize: 16,
-      color: 'black',
+      color: 'white',
     },
     details: {
       fontSize: 14,
@@ -77,62 +88,12 @@ const TeamList = () => {
       marginTop: 4,
     },
     sectionTitle: {
-      fontSize: 18,
+      fontSize: 24,
       fontWeight: 'bold',
       marginTop: 20,
       marginBottom: 10,
       color: 'black',
     },
   });
-
-//   return (
-//     <SafeAreaView style={styles.container}>
-//       <ScrollView contentContainerStyle={styles.scrollView}>
-        
-//         {/* Sección de Partidos */}
-//         <Text style={styles.sectionTitle}>Partidos</Text>
-//         {players.map((player, index) => (
-//           <TouchableOpacity key={index} style={styles.item}>
-//             <Text style={styles.text}>{player.Nombre} - {player.tipo}</Text>
-//             <Text style={styles.details}>{player.detalles}</Text>
-//           </TouchableOpacity>
-//         ))}
-        
-//         {/* Sección de Entrenamientos */}
-//         <Text style={styles.sectionTitle}>Entrenamientos</Text>
-//         {entrenamientos.map((player, index) => (
-//           <TouchableOpacity key={index} style={styles.item}>
-//             <Text style={styles.text}>{player.Nombre} - {player.tipo}</Text>
-//             <Text style={styles.details}>{player.detalles}</Text>
-//           </TouchableOpacity>
-//         ))}
-
-//       </ScrollView>
-//     </SafeAreaView>
-//   );
-// };
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flexGrow: 1,
-//     backgroundColor: '#FFCE33',
-//   },
-//   scrollView: {
-//     paddingHorizontal: 16,
-//     paddingVertical: 20,
-//   },
-//   item: {
-//     padding: 16,
-//     marginVertical: 8,
-//     borderRadius: 10,
-//     borderWidth: 1,
-//     borderColor: "#ccc",
-//     backgroundColor: 'white',
-//   },
-//   text: {
-//     fontSize: 16,
-//     color: 'black',
-//   },
-// });
 
 export default TeamList;

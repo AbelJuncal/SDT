@@ -19,13 +19,14 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   logo: {
-    width: 40,
-    height: 40,
+    width: 50,
+    height: 50,
     resizeMode: 'contain',
   },
   text: {
+    fontWeight: 'bold',
     color: 'white',
-    fontSize: 20,
+    fontSize: 24,
   },
 });
 
