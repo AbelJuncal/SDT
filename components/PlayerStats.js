@@ -3,29 +3,20 @@ import { View, Text, TouchableOpacity, ScrollView, StyleSheet, SafeAreaView, Dim
 import {Styles} from '../styles';
 
 const { height } = Dimensions.get('window');
-const API_URL = "https://d80b-147-83-201-130.ngrok-free.app";
+const API_URL = "https://1924-147-83-201-130.ngrok-free.app";
 
 const PlayerList = () => {
   const [jugadores, setJugadores] = useState([]);
 
   useEffect(() => {
-    const fetchPlayers = async () => {
-      try {
-        const response = await fetch(`${API_URL}/players`);
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
+    fetch(`${API_URL}/matches`)
+      .then((res) => res.json())
+      .then((data) => {
         const players = data.rows.map((player) => ({
           ...player,
         }));
         setJugadores(players);
-      } catch (error) {
-        console.error("Error fetching players:", error);
-      }
-    };
-  
-    fetchPlayers();
+      })
   }, []);
 
   return (

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, TouchableOpacity, ScrollView, StyleSheet, SafeAreaView, Dimensions } from 'react-native';
 
 const { height } = Dimensions.get('window');
-const API_URL = "https://3551-147-83-201-130.ngrok-free.app";
+const API_URL = "https://1924-147-83-201-130.ngrok-free.app";
 
 const TeamList = () => {
   const [jugadores, setJugadores] = useState([]);
@@ -16,7 +16,6 @@ const TeamList = () => {
         }));
         setJugadores(players);
       })
-      .catch((err) => console.error(err));
   }, []);
 
     // Filtrar jugadores por tipo: 'partido' o 'entrenamiento'
