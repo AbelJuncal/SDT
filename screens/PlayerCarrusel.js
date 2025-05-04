@@ -1,11 +1,11 @@
 import React from 'react';
 import { SafeAreaView } from 'react-native';
-import TeamCarrusel from '../components/TeamCarrusel';
+import PlayerStats from '../components/PlayerStats';
 
 const App = () => {
   return (
     <SafeAreaView>
-      <TeamCarrusel />
+      <PlayerStats />
     </SafeAreaView>
   );
 };

@@ -7,7 +7,7 @@ import { ColorProperties } from "react-native-reanimated/lib/typescript/Colors";
 
 const API_URL = "https://21dc-147-83-201-130.ngrok-free.app";
 
-const FootballSquad = ({route}) => {
+const FootballSquad = ({route, navigation}) => {
   const [jugadores, setJugadores] = useState([]);
 
   // Obtenemos el tipo de convocatoria de los parámetros de la navegación
@@ -73,6 +73,7 @@ const FootballSquad = ({route}) => {
         }),
       });
       console.log('Mensaje enviado a Telegram correctamente.');
+      navigation.navigate('Home');
     } catch (error) {
       console.error('Error al enviar el mensaje a Telegram:', error);
     }

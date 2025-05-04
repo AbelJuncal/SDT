@@ -6,8 +6,8 @@ import HomeScreen from '../screens/HomeScreen';
 import CalendarScreen from '../screens/CalendarScreen';
 import Layout from '../components/Layout';
 import FootballSquad from '../screens/FootballSquad';
-import PlayerStats from '../screens/PlayerStats';
-
+import PlayerCarousel from '../screens/PlayerCarrusel';
+import TeamStats from '../screens/TeamStats';
 
 const Stack = createStackNavigator();
 
@@ -24,7 +24,8 @@ const AppNavigator = () => (
       <Stack.Screen name="Home" component={withLayout(HomeScreen)} />
       <Stack.Screen name="Calendar" component={withLayout(CalendarScreen)} />
       <Stack.Screen name="FootballSquad" component={withLayout(FootballSquad)} />
-      <Stack.Screen name="PlayerStats" component={withLayout(PlayerStats)} />
+      <Stack.Screen name="PlayerCarrusel" component={withLayout(PlayerCarousel)} />
+      <Stack.Screen name="TeamStats" component={withLayout(TeamStats)} />
     </Stack.Navigator>
   </NavigationContainer>
 );
