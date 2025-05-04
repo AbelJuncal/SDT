@@ -1,11 +1,10 @@
-
 import React, { useEffect, useState } from "react";
 import { View, Text, ScrollView, TouchableOpacity, Button} from "react-native";
 import { CustomButton } from "../components";
 import { Styles } from "../styles";
 import { ColorProperties } from "react-native-reanimated/lib/typescript/Colors";
 
-const API_URL = "https://d80b-147-83-201-130.ngrok-free.app";
+const API_URL = "https://3551-147-83-201-130.ngrok-free.app";
 
 const FootballSquad = ({route, navigation}) => {
   const [jugadores, setJugadores] = useState([]);
