@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, TouchableOpacity, ScrollView, StyleSheet, SafeAreaView, Dimensions } from 'react-native';
 
 const { height } = Dimensions.get('window');
-const API_URL = "https://1924-147-83-201-130.ngrok-free.app";
+const API_URL = "https://ce93-147-83-201-130.ngrok-free.app";
 
 const TeamList = () => {
   const [jugadores, setJugadores] = useState([]);
@@ -18,7 +18,6 @@ const TeamList = () => {
       })
   }, []);
 
-    // Filtrar jugadores por tipo: 'partido' o 'entrenamiento'
     const partidos = jugadores.filter(player => player.tipo === 'partido');
     const copa = jugadores.filter(player => player.tipo === 'copa');
     const entrenamientos = jugadores.filter(player => player.tipo === 'entrenamiento');
@@ -46,8 +45,7 @@ const TeamList = () => {
             </TouchableOpacity>
           ))}
           
-          {/* Sección de Entrenamientos */}
-          <Text style={styles.sectionTitle}>Entrenamientos</Text>
+          <Text style={styles.sectionTitle}>Adestramentos</Text>
           {entrenamientos.map((player, index) => (
             <TouchableOpacity key={index} style={styles.item}>
               <Text style={styles.text}>{player.duracion_minutos} minutos - {player.asistentes} participantes</Text>

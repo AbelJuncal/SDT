@@ -8,7 +8,6 @@ const Header = () => (
   <View style={styles.header}>
     <Image source={logo} style={styles.logo} />
     <Image source={logo2} style={styles.logo} />
-    {/* <Text style={styles.text}>SDTrainer</Text> */}
   </View>
 );
 

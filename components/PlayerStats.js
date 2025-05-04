@@ -3,13 +3,13 @@ import { View, Text, TouchableOpacity, ScrollView, StyleSheet, SafeAreaView, Dim
 import {Styles} from '../styles';
 
 const { height } = Dimensions.get('window');
-const API_URL = "https://1924-147-83-201-130.ngrok-free.app";
+const API_URL = "https://ce93-147-83-201-130.ngrok-free.app";
 
 const PlayerList = () => {
   const [jugadores, setJugadores] = useState([]);
 
   useEffect(() => {
-    fetch(`${API_URL}/matches`)
+    fetch(`${API_URL}/players`)
       .then((res) => res.json())
       .then((data) => {
         const players = data.rows.map((player) => ({
@@ -28,14 +28,14 @@ const PlayerList = () => {
             style={Styles.button}
           >
               <Text style={Styles.buttonText}>{player.Nombre}</Text>
-              <Text style={Styles.buttonText}>Apellidos: {player.Apellidos}</Text>
+              <Text style={Styles.buttonText}>Apelidos: {player.Apellidos}</Text>
               <Text style={Styles.buttonText}>Edad: {player.Edad}</Text>
               <Text style={Styles.buttonText}>Posición: {player.Posición}</Text>
-              <Text style={Styles.buttonText}>Partidos Jugados: {player.Partidos_Jugados}</Text>
+              <Text style={Styles.buttonText}>Partidos Xogados: {player.Partidos_Jugados}</Text>
               <Text style={Styles.buttonText}>Minutos: {player.Minutos}</Text>
               <Text style={Styles.buttonText}>Goles: {player.Goles}</Text>
-              <Text style={Styles.buttonText}>Tarjetas Amarillas: {player.Tarjetas_Amarillas}</Text>
-              <Text style={Styles.buttonText}>Tarjetas Rojas: {player.Tarjetas_Rojas}</Text>
+              <Text style={Styles.buttonText}>Cartóns Amarelos: {player.Tarjetas_Amarillas}</Text>
+              <Text style={Styles.buttonText}>Cartóns Vermello: {player.Tarjetas_Rojas}</Text>
               <Text style={Styles.buttonText}>Lesionado: {player.Lesionado ? 'Sí' : 'No'}</Text>
           </TouchableOpacity>
         ))}
